@@ -6,6 +6,7 @@ use App\Models\Home;
 use App\Models\Pic;
 use App\Traits\FileHelper;
 use Carbon\Carbon;
+use Dotenv\Validator;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
@@ -24,7 +25,6 @@ class CommonController extends Controller
     {
         return $this->uploadFile($request);
     }
-
 
 
     /**
@@ -61,6 +61,40 @@ class CommonController extends Controller
             return $this->success('删除成功');
         } else {
             return $this->failed('删除失败');
+        }
+    }
+
+
+    public function postUploadPicture(Request $request)
+    {
+        $file = $request->file('wang-editor-image-file');
+        //获取上传文件的大小
+        $size = $file->getSize();
+
+        if ($size > env('FILE_MAX_SIZE', 3) * 1024 * 1024) {
+            return $this->failed('上传文件不能超过' . env('FILE_MAX_SIZE', 3) . 'M');
+        }
+
+        //判断文件是否是通过HTTP POST上传的
+        $realPath = $file->getRealPath();
+
+        if (!$realPath) {
+            return $this->failed('非法操作');
+        }
+        //创建以当前日期命名的文件夹
+        $today = date('Ymd');
+        //上传文件
+        $store_result = $file->store($today);
+        if ($store_result) {
+            $data = [
+                'error' => 0,
+                'data' => [
+                    '/upload/' . $store_result
+                ]
+            ];
+            return $data;
+        } else {
+            return $this->failed('上传失败');
         }
     }
 }

@@ -1,0 +1,449 @@
+.orderform,
+.login{
+	width: 100%;
+	height: auto;
+	box-sizing: border-box;
+	margin-top: .88rem;
+	padding: 0 .64rem;
+}
+.login{
+}
+.orderform{
+	padding: .4rem .64rem;
+}
+.login>h3{
+	width: 100%;
+	line-height: 2.6rem;
+	color: #ff3535;
+	font-size: .8rem;
+	font-weight: normal;
+	text-align: center;
+	padding-bottom: 0.62rem;
+}
+.row{
+	float: left;
+	width: 100%;
+	height: .8rem;
+	line-height: .8rem;
+	margin-bottom: .4rem;
+	position: relative;
+}
+.row img{
+	float: left;
+	width: .36rem;
+	height: .4rem;
+	margin: .3rem 0;
+}
+.row select,
+.row input{
+	width: 5.43rem;
+	height: .8rem;
+	line-height: .8rem;
+	border: none;
+	border-bottom: 1px solid #ff3535;
+	box-sizing: border-box;
+	float: right;
+	overflow: hidden;
+	padding-left: 0.12rem;
+	font-size: 0.32rem;
+}
+.row:nth-last-child(1){
+	margin:  .45rem 0;
+}
+.row>a{
+	color: #ff3535;
+	float: left;
+	font-size: .28rem;
+}
+.row .findkey{
+	float: right;
+}
+.login .dlbtn{
+	margin: .28rem 0;
+}
+
+.register-back{
+	width: 1rem;
+	height: inherit;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.rows{
+	width: 100%;
+	height: .8rem;
+	line-height: .8rem;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: .25rem;
+	overflow: hidden;
+}
+
+.rows h3{
+	width: 28%;
+	float: left;
+	/*font-family: "Hiragino Sans GB";*/
+	/*font-family: 'fontNameRegular';*/
+	font-family: PingFangSC-Regular, sans-serif;
+	font-size: .3rem;
+	height: 0.8rem;
+	line-height: 0.8rem;
+}
+.rows h4{
+	color: #666;
+	font-size: .24rem;
+	font-weight: normal;
+}
+.rows h4 a{
+	color: #333;
+	font-size: .24rem;
+}
+.rows input{
+	width: 72%;
+	float: left;
+	height: 0.8rem;
+	line-height: .8rem;
+	font-size: 0.26rem;
+	color: #666;
+	font-family: "微软雅黑";
+}
+.row p,
+.rows p{
+	color: #ff3535;
+	display: none;
+	font-size: .24rem;
+	font-weight: normal;
+	line-height: .24rem;
+	position: absolute;
+	left: 20%;
+	bottom: -.3rem;
+	z-index: 1;
+}
+.row p{
+	left: 13%;
+}
+.rows span{
+	color: #ff3535;
+	font-size: .3rem;
+	font-weight: normal;
+	position: absolute;
+	right: .1rem;
+	top: 0;
+}
+button{
+	width: 100%;
+	height: .88rem;
+	background: #00A0E9;
+	border: none;
+	border-radius: .5rem;
+	box-sizing: border-box;
+	color: #fff;
+	font-size: .32rem;
+}
+.sureBtn{
+	position: relative;
+	height: 0.88rem;
+}
+.formBtn{
+	margin-top: 0.6rem;
+	display: none;
+}
+.defaultBtn{
+	margin-top: 0.6rem;
+	position: absolute;
+	background: #ddd;
+	
+}
+.zcbtn:active{
+	background: #e5e5e5;
+	color: #666;
+}
+.rows:nth-last-of-type(1)>a{
+	float: left;
+	width: .3rem;
+	height: .3rem;
+	margin-right: .17rem;
+}
+.rows:nth-last-of-type(1)>a img{
+	float: left;
+	width: 100%;
+	height: auto;
+}
+
+
+
+
+.header{
+	padding: 0.24rem;
+	height: 0.8rem;
+	line-height: 0.88rem;
+	position: relative;
+	width: auto;
+	border-bottom: 0.01rem solid #d7d7d7;
+}
+.header .backbutton{
+	width: 0.4rem;
+	height: 0.4rem;
+	position: absolute;
+	left: 0.24rem;
+	background: url(../img/arrowback.png) no-repeat left center ;
+	background-size: 0.23rem 0.4rem;
+}
+.header .title{
+	width: 100%;
+	height: 0.4rem;
+	line-height: 0.4rem;
+	color: #222222;
+	font-size: 0.36rem;
+	text-align: center;
+}
+.header .sureBtn{
+	font-size: 0.3rem;
+	color: #666666;
+	position: absolute;
+	top: 0.24rem;
+	right: 0.24rem;
+}
+
+.orderConfirm{
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	position: absolute;
+}
+.main .orderConfirmCon{
+	
+}
+.main .orderConfirmCon h3{
+	height: 0.88rem;
+	line-height: 0.88rem;
+	padding-left: 0.24rem;
+	border-bottom: 1px  solid #d7d7d7;
+	color: #222;
+	font-size: 0.28rem;
+}
+.main .orderConfirmCon ul{
+	padding-left: 0.24rem;
+}
+.main .orderConfirmCon ul li{
+	height: 0.88rem;
+	line-height: 0.88rem;
+	border-bottom: 0.01rem solid #d7d7d7;
+}
+.main .orderConfirmCon ul li span{
+	width: 1.5rem;
+	font-size: 0.28rem;
+	color: #222222;
+	float: left;
+}
+.main .orderConfirmCon ul li input{
+	width: 5.75rem;
+	float: left;
+	height: 0.88rem;
+	display: block;
+	line-height: 0.88rem;
+	background: #fff;
+	color: #222;
+	font-size: 0.28rem;
+	border-bottom: 1px solid #d7d7d7;
+}
+.main .orderConfirmCon .hint{
+	height: 0.88rem;
+	line-height: 0.88rem;
+	font-size: 0.25rem;
+	color: #666666;
+	margin-left: 0.24rem;
+	padding-left: 0.24rem;
+	position: relative;
+}
+.main .orderConfirmCon .hint:after{
+	content: "";
+	width: 0.06rem;
+	height: 0.06rem;
+	display: block;
+	position: absolute;
+	left: 0px;
+	top: 50%;
+	margin-top: -0.03rem;
+	border-radius: 50%;
+	background: #ff3232;
+}
+.main .orderConfirmCon .submit{
+	padding-top: 0.7rem;
+	width: 7rem;
+	margin: 0 auto;
+}
+.main .orderConfirmCon .submit input{
+	width: 7rem;
+	height: 0.88rem;
+	border-radius: 0.88rem;
+	text-align: center;
+	line-break: 0.88rem;
+	color: #fff;
+	background: #ff3232;
+	font-size: 0.36rem;
+}
+
+
+
+.main .orderConfirmCon .submit{
+	padding-top: 0.7rem;
+	width: 7rem;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.main .orderConfirmCon .submit input{
+	width: 3.2rem;
+	height: 0.88rem;
+	border-radius: 0.88rem;
+	text-align: center;
+	line-height: 0.88rem;
+	color: #fff;
+	background: #ff3232;
+	font-size: 0.32rem;
+	font-family: "宋体";
+	float:left;
+}
+.main .orderConfirmCon .submit a{
+	width: 3.2rem;
+	height: 0.88rem;
+	border-radius: 0.88rem;
+	text-align: center;
+	line-height: 0.88rem;
+	color: #fff;
+	background: #ff3232;
+	font-size: 0.32rem;
+	display: block;
+	font-family: "宋体";
+	float:right;
+}
+
+
+
+
+
+.maskLayer{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	background: rgba(0,0,0,0.3);
+	z-index: 99;
+	display: none;
+}
+.maskLayer .popup{
+	width: 66%;
+	height: 4.06rem;
+	margin: 0 auto;
+	background: #fff;
+	border-radius: 0.12rem;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -33%;
+	margin-top: -2.03rem;
+	padding-bottom: 0.22rem;
+	
+}
+.maskLayer .popup .popupTitle{
+	border-bottom: 0.01rem solid #a0daa1;
+	padding-left: 0.23rem;
+	padding-right: 0.23rem;
+	font-weight: normal;
+	height: 1rem;
+	line-height: 1rem;
+	font-size: 0.3rem;
+	text-align: center;
+	position: relative;
+}
+.maskLayer .popup .popupCon{
+	overflow: hidden;	
+	text-align: center;
+}
+.maskLayer .popup .popupCon b{
+	display: block;
+	line-height: 0.36rem;
+	font-size: 0.32rem;
+	font-weight: normal;
+	padding-bottom: 0.18rem;
+}
+.maskLayer .popup .popupCon p{
+	padding-top: 0.15rem;
+	line-height: 0.6rem;
+	font-size: 0.28rem;
+	padding-bottom: 0.06rem;
+}
+.maskLayer .popup .popupPwd{
+	width: 3.63rem;
+	height: 0.6rem;
+	line-height: 0.6rem;
+	position: relative;
+	border: 0.01rem solid #c5c5c5;
+	
+}
+/*.maskLayer .popup .popupPwd:after{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0.6rem;
+	height: 0.6rem;
+	border-left: 0.01rem solid #c5c5c5;
+	border-right: 0.01rem solid #c5c5c5;
+	top: 0rem;
+	left: 0.6rem;
+}
+.maskLayer .popup .popupPwd:before{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0.6rem;
+	height: 0.6rem;
+	border-left: 0.01rem solid #c5c5c5;
+	border-right: 0.01rem solid #c5c5c5;
+	top: 0rem;
+	left: 1.8rem;
+}*/
+.maskLayer .popup .pwd{
+	width: 3.63rem;
+	height: 0.6rem;
+	display: block;
+	line-height: 0.6rem;
+	padding: 0px;
+	letter-spacing: 0.06rem;
+	padding-left: 0.25rem;
+	margin: 0px;
+	box-sizing: border-box;
+	border: 1px solid #c5c5c5;
+	margin: 0 auto;
+}
+.maskLayer .popup .payBtn{
+	width: 60%;
+	margin: 0.32rem auto 0;
+	height: 0.72rem;
+	display: block;
+	font-size: 0.28rem;
+}
+/*.maskLayer .popup .popupPwd .line{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0.6rem;
+	height: 0.6rem;
+	border-right: 0.01rem solid #c5c5c5;
+	top: 0rem;
+	left: 2.4rem;
+}*/
+.maskLayer .popup .popupCon .sureBtn{
+	color: #ff3232;
+	border-left: 0.01rem solid #ddd;
+}
+
+.popupTitle .closeBtn{
+	width: 1rem;
+	height: 1rem;
+	left: 0rem;
+	position: absolute;
+	display: block;
+	background: url(../img/closeBtn2.png) no-repeat center center;
+	background-size: 0.25rem 0.25rem;
+}
