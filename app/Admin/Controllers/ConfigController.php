@@ -122,7 +122,7 @@ class ConfigController extends Controller
         $form->text('weibo', '微博');
         $form->text('taobao', '淘宝');
         $form->email('email', '邮箱');
-        $form->image('weixin', '微信')->move('public/uploads/');
+        $form->image('weixin', '微信')->move('/uploads');
         $form->editor('about', '关于我们');
         $form->mobile('tel', '电话');
         $form->file('video', '视频');
