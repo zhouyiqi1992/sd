@@ -3,6 +3,7 @@ node_modules/
 /public/storage
 public/upload/
 storage/
+storage/logs/laravel.log
 vendor/
 .idea/
 .env
