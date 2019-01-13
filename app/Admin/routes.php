@@ -14,8 +14,10 @@ Route::group([
     $router->get('product/create', 'ProductController@create');
     $router->get('product', 'ProductController@index');
     $router->get('product/{id}', 'ProductController@detail');
+    $router->get('product/{id}/edit', 'ProductController@edit');
     $router->post('product', 'ProductController@store');
     $router->post('product/delete/{id}', 'ProductController@store');
+    $router->delete('product/{id}', 'ProductController@destroy');
 
     $router->get('categories', 'CategoriesController@index');
     $router->get('categories/create', 'CategoriesController@create');
