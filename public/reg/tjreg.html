@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/mainStyle.css" />
+		<link rel="stylesheet" type="text/css" href="css/tjreg.css" />
+		<link rel="stylesheet" href="css/common.css" type="text/css" />
+		<script src="js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+			document.addEventListener("plusready", function() {
+				plus.key.addEventListener("backbutton", function() {
+					window.history.back();
+				}, false);
+			});
+			$(function() {
+
+//				扫码获取手机号
+				var telephone = request.match(/id=.{11}/)[0].substr(3);
+
+				//				点击切换按钮背景图案		相关协议左侧按钮
+				$(".ipt a.check").tap(function() {
+					var i = $(this).attr("data");
+					if(i == 1) {
+						$(this).attr("data", 0).removeClass("active");
+					} else {
+						$(this).attr("data", 1).addClass("active");
+					}
+				});
+
+				//	报错提示
+				function markmsg(err) {
+					$(".markmsg").text(err).css({
+						"opacity": "1",
+						"z-index": "100"
+					});
+					$(".mark").show();
+					setTimeout(function() {
+						$(".markmsg").text(err).css({
+							"opacity": "0",
+							"z-index": "-1"
+						});
+						$(".mark").hide();
+					}, 2000);
+				}
+
+				//点击获取验证码 出现倒计时 且按钮禁用
+
+				$("#tjreg a.button").on("tap", function reg() {
+					// if ($("#reg #phone").val()=="") {
+					//   		return markmsg("手机号码不能为空！");
+					//   	}
+					if(!re01.test($("#reg #phone").val())) {
+						return markmsg("请输入格式正确的11位手机号码");
+					}
+					if($("#reg #name").val().length == 0) {
+						return markmsg("姓名不能为空！");
+					}
+					if(!re02.test($("#reg #name").val())) {
+						return markmsg("请检查格式，只能输入中文字母数字，2到10位！");
+					}
+					if($("#reg #password").val().length == 0) {
+						return markmsg("密码不能为空！");
+					}
+					if(!re03.test($("#reg #password").val())) {
+						return markmsg("密码长度6位以上16位以内");
+					}
+					if($("#reg #passwordAg").val().length == 0) {
+						return markmsg("请确认密码！");
+					}
+					if(!re03.test($("#reg #passwordAg").val())) {
+						return markmsg("密码长度6位以上16位以内！");
+					}
+					if($("#reg #passwordAg").val() != $("#reg #password").val()) {
+						return markmsg("2次输入密码不一致！");
+					}
+					if(!$("#reg a.check").hasClass("active")) {
+						return markmsg("请勾选阅读并同意《相关协议》！");
+					} else {
+						$.ajax({
+							type: "post",
+							url: urlfirst + "save",
+							dataType: "json",
+							data: {
+								phone: $("#reg #phone").val(),
+								code: $("#verification").val(),
+								realname: $("#reg #name").val(),
+								passwords: $("#reg #password").val(),
+								recommend_code: telephone,
+								type: 1
+							},
+							success: function(data) {
+								console.log(data);
+								if(data.status == 1) {
+									//		     			登录成功 跳转首页
+									markmsg("注册成功，即刻登录");
+//									location.href = "login.html";
+								} else {
+									return markmsg(data.msg);
+								}
+							}
+						});
+					}
+				});
+
+			})
+		</script>
+	</head>
+	<body>
+		<div class="header-back">
+			<h2>注册</h2>
+		</div>
+		<div id="tjreg">
+			<div class="ipt">
+				<b>+86</b>
+				<input type="number" id="phone" class="phone" placeholder="请输入正确的手机号码" />
+			</div>
+			<div class="ipt">
+				<input type="text" id="verification" class="verification" placeholder="请输入验证码" />
+				<div id="msgTest">获取短信验证码</div>
+			</div>
+			<div class="ipt">
+				<b>姓 名 :</b>
+				<input type="text" id="name" class="name" placeholder="请输入姓名" />
+			</div>
+			<div class="ipt">
+				<b>登录密码 :</b>
+				<input type="password" id="password" class="password" placeholder="请输入密码" />
+			</div>
+			<div class="ipt">
+				<b>确认密码 :</b>
+				<input type="password" id="passwordAg" class="passwordAg" placeholder="请再次输入密码" />
+			</div>
+			<p>提示：默认为支付密码</p>
+			<button class="button-big">注 册</button>
+			<!--<a href="javascript:void(0)" class="button">注册</a>-->
+			<div class="ipt">
+				<a href="javascript:void(0);" class="check active"></a>
+				<p>已认真阅读并同意</p>
+				<a href="protocol.html">《相关协议》</a>
+			</div>
+			<div class="markmsg"></div>
+			<div class="mark"></div>
+		</div>
+	</body>
+</html>

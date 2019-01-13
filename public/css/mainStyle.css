@@ -1,0 +1,694 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+}
+a {
+  color: #555;
+  text-decoration: none;
+}
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+img {
+  border: none;
+}
+/*------header------*/
+header {
+  width: 100%;
+  height: 1rem;
+  background: #4b89dc;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+header a img {
+  width: .24rem;
+  height: .24rem;
+  position: absolute;
+  top: 0.28rem;
+}
+header a.headTopLeft img {
+  left: 0.24rem;
+}
+header a.headTopRight img {
+  right: 0.24rem;
+}
+header h2 {
+  font-weight: normal;
+  font-size: 0.42rem;
+  color: #fff;
+  line-height: 1rem;
+  text-align: center;
+}
+.headerKeep {
+  width: 100%;
+  height: 4.15rem;
+  background: #4b89dc;
+  margin-top: .98rem;
+  position: relative;
+}
+.headerKeep p {
+  margin-left: .52rem;
+  margin-bottom: 0;
+  line-height: 1rem;
+}
+.headerKeep .searchBox {
+  width: 100%;
+  height: 1rem;
+  background: #0277bd;
+  position: absolute;
+  bottom: 0;
+}
+.mui-placeholder {
+  width: 60%;
+  margin: 0 15% 0 25%;
+  position: relative;
+}
+.mui-placeholder .iconfont {
+  position: absolute;
+  right: .2rem;
+  top: 0;
+}
+/*------注册------*/
+#reg {
+  background: #fff;
+  margin-top: 1.2rem;
+}
+#reg .ipt,
+#login .ipt,
+#passwordRest .ipt {
+  width: 80%;
+  height: 1.05rem;
+  line-height: 1.05rem;
+  border: 1px solid #ececec;
+  border-radius: 5px;
+  box-sizing: border-box;
+  float: left;
+  margin: 0.1rem 10%;
+  overflow: hidden;
+  position: relative;
+}
+#reg > p {
+  width: auto;
+  height: .5rem;
+  line-height: .5rem;
+  color: #4b89dc;
+  display: block;
+  float: left;
+  font-size: .26rem;
+  margin: 0 10%;
+  padding-left: .2rem;
+}
+#reg > b,
+#login > b {
+  width: auto;
+  height: .5rem;
+  line-height: .5rem;
+  color: #fa2a2a;
+  display: none;
+  float: left;
+  font-size: .26rem;
+  margin-left: 14%;
+}
+input[type="number"],
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  height: 1.05rem;
+  box-sizing: border-box;
+  border: none;
+  color: #808080;
+  font-size: 0.28rem;
+  float: left;
+  outline: none;
+  text-indent: 20%;
+}
+#reg .ipt:nth-of-type(3) input,
+#reg .ipt:nth-of-type(4) input,
+#reg .ipt:nth-of-type(5) input {
+  text-indent: 30%;
+}
+#reg .ipt:nth-of-type(6) input {
+  text-indent: 25%;
+}
+#reg .ipt:nth-of-type(2) {
+  border: none;
+}
+#reg .ipt:nth-of-type(2) input[type="text"] {
+  width: 53%;
+  border-radius: 5px;
+  border: 1px solid #ececec;
+  text-indent: 8%;
+}
+#reg .ipt:nth-of-type(7) {
+  border: none;
+  height: .45rem;
+  line-height: .45rem;
+}
+.ipt b {
+  width: 1rem;
+  height: 1.05rem;
+  border-right: 1px solid #ececec;
+  box-sizing: border-box;
+  color: #aaa;
+  font-size: 0.3rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.05rem;
+  position: absolute;
+  left: 0;
+  text-align: center;
+}
+#reg .ipt:nth-of-type(3) b,
+#reg .ipt:nth-of-type(4) b,
+#reg .ipt:nth-of-type(5) b {
+  width: 1.7rem;
+  border-right: none;
+}
+#reg .ipt:nth-of-type(6) b {
+  width: 1.4rem;
+  border-right: none;
+}
+#reg .ipt:nth-of-type(7) p {
+  width: auto;
+  height: 0.44rem;
+  color: #aaaaaa;
+  float: left;
+  font-size: 0.28rem;
+  margin-right: 1%;
+}
+#reg .ipt:nth-of-type(7) a {
+  height: 0.45rem;
+  color: #0277bd;
+  float: left;
+  font-size: 0.28rem;
+}
+.ipt a.check {
+  width: 0.44rem;
+  height: 0.44rem;
+  border: 1px solid #4b89dc;
+  border-radius: 50%;
+  box-sizing: border-box;
+  float: left;
+  margin: 0 2%;
+}
+.ipt a.active {
+  background: url('../img/success02.png') no-repeat center 30%;
+}
+.ipt #msgTest {
+  width: 40%;
+  height: 1.05rem;
+  line-height: 1.05rem;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #ececec;
+  box-sizing: border-box;
+  color: #aaaaaa;
+  float: left;
+  font-size: 0.28rem;
+  font-weight: normal;
+  margin-left: 7%;
+  text-align: center;
+}
+#reg .button,
+#login .button,
+#sheet .button {
+  width: 80%;
+  height: .8rem;
+  line-height: .8rem;
+  background: #4b89dc;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  float: left;
+  font-weight: normal;
+  font-size: 0.32rem;
+  margin: 0.1rem 10%;
+  outline: none;
+  text-align: center;
+}
+#login button:hover {
+  background: #0027bd;
+}
+input::-webkit-input-placeholder {
+  color: #e6e6e6;
+}
+input::-ms-input-placeholder {
+  color: #e6e6e6;
+}
+.markmsg {
+  width: 80%;
+  height: auto;
+  min-height: .6rem;
+  line-height: .6rem;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #4b89dc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: .3rem;
+  font-weight: normal;
+  margin: 0 10%;
+  opacity: 0;
+  padding: 0 5%;
+  position: absolute;
+  left: 0;
+  top: 30%;
+  text-align: center;
+  z-index: -1;
+}
+.mark {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 5;
+}
+#win {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: none;
+  position: fixed;
+  top: 1rem;
+}
+#win .succeed {
+  width: 18%;
+  height: 1.32rem;
+  margin: 1.08rem 41% 0;
+}
+#win .succeed img {
+  width: 100%;
+  height: auto;
+}
+#win p {
+  width: 80%;
+  height: 0.48rem;
+  line-height: 0.48rem;
+  box-sizing: border-box;
+  color: #4b89dc;
+  display: inline-block;
+  float: left;
+  font-size: 0.3rem;
+  margin: 0.32rem 10% 0.52rem;
+  text-align: center;
+}
+/*------登录------*/
+#login {
+  background: #fff;
+  overflow: hidden;
+}
+#login .circle {
+  width: 3.65rem;
+  height: 3.65rem;
+  border: 1px solid #4b89dc;
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin: 1.12rem auto;
+  position: relative;
+}
+#login .circle a {
+  position: absolute;
+  left: -45%;
+  top: -25%;
+}
+#login .circle a img {
+  width: .3rem;
+  height: .6rem;
+  float: left;
+}
+#login .circle h2 {
+  width: 2.28rem;
+  height: 0.68rem;
+  background: url('../img/labake.png') no-repeat;
+  margin: 0 auto;
+  position: absolute;
+  left: 20%;
+  top: 45%;
+}
+#login .ipt input[type="number"],
+#login .ipt input[type="password"] {
+  color: #000;
+}
+#login .ipt .pic {
+  width: 0.36rem;
+  height: 0.44rem;
+  box-sizing: border-box;
+  position: absolute;
+  left: 6%;
+  top: 32%;
+}
+#login .ipt:nth-of-type(2) .pic {
+  background: url('../img/person-lan.png') no-repeat;
+}
+#login .ipt:nth-of-type(3) .pic {
+  background: url('../img/lock.png') no-repeat;
+}
+#login .ipt:nth-of-type(4) {
+  border: none;
+}
+#login .ipt:nth-of-type(5) {
+  height: 0.44rem;
+  border: none;
+}
+#login .ipt:nth-of-type(5) a {
+  height: 0.44rem;
+  color: #0277bd;
+  float: left;
+  font-size: 0.28rem;
+}
+#login .ipt:nth-of-type(5) p {
+  width: auto;
+  height: 0.44rem;
+  color: #aaaaaa;
+  float: left;
+  font-size: 0.28rem;
+  margin-right: 1%;
+}
+#login .ipt a {
+  float: left;
+  font-size: .28rem;
+  line-height: normal;
+  padding: 0 5%;
+}
+#login .ipt .reg {
+  float: right;
+}
+.sheet {
+  width: 80%;
+  height: 25%;
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: none;
+  margin: 0 10%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+}
+.sheet p {
+  box-sizing: border-box;
+  color: #808080;
+  font-size: .36rem;
+  margin: 12% 5%;
+  text-align: center;
+}
+.sheet button {
+  width: 40%;
+  height: 25%;
+  background: #4b89dc;
+  border: 1px solid #4b89dc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #fff;
+  margin: 0 5%;
+  float: left;
+  font-size: .42rem;
+  text-align: center;
+}
+.shade {
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+#passwordRest {
+  margin-top: 1.1rem;
+}
+#passwordRest .ipt:nth-of-type(2) {
+  border: 0;
+}
+#passwordRest .ipt:nth-of-type(2) input {
+  width: 53%;
+  border: 1px solid #ececec;
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-indent: 5%;
+}
+#passwordRest .ipt:nth-of-type(3) input {
+  text-indent: 23%;
+}
+#passwordRest .ipt:nth-of-type(3) span {
+  width: 30%;
+  box-sizing: border-box;
+  float: left;
+}
+#passwordRest .ipt:nth-of-type(3) span {
+  height: 1.05rem;
+  line-height: 1.05rem;
+  color: #808080;
+  display: inline;
+  font-size: .28rem;
+  outline: none;
+  text-align: center;
+}
+#passwordRest .ipt:nth-of-type(3) b {
+  width: 23%;
+  border-right: 0;
+}
+#passwordRest .ipt:nth-of-type(4) b {
+  width: 28%;
+  border-right: 0;
+}
+#passwordRest .ipt:nth-of-type(4) input {
+  text-indent: 28%;
+}
+#passwordRest .button-big {
+  float: left;
+}
+#merchantMain {
+  margin-top: 1rem;
+}
+#merchantMain #pic {
+  width: 100%;
+  height: 4.1rem;
+  float: left;
+}
+#merchantMain .merchantMainCont {
+  width: 100%;
+  min-height: 1.9rem;
+  height: auto;
+  border-bottom: .2rem solid #e6e6e6;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 0 .34rem;
+  position: relative;
+}
+#merchantMain .merchantMainCont h3 {
+  font-size: .26rem;
+  font-weight: normal;
+  width: 4rem;
+  height: .7rem;
+  line-height: .7rem;
+  text-align: left;
+}
+#merchantMain .merchantMainCont .stars-box {
+  width: 45%;
+  height: .3rem;
+  float: left;
+}
+.stars-box {
+  font-size: .24rem;
+}
+@font-face {
+  font-family: "star";
+  src: url('../font/star.eot?t=1469264940');
+  src: url('../font/star.eot?t=1469264940#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../font/star.woff?t=1469264940') format('woff'), /* chrome, firefox */ url('../font/star.ttf?t=1469264940') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('../font/star.svg?t=1469264940#iconfont') format('svg');
+  
+  /* IE9*/
+  /* iOS 4.1- */
+}
+.stars {
+  float: left;
+}
+.stars i {
+  color: #cd1616;
+  font-family: "star" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+#merchantMain .merchantMainCont .index-address {
+  width: 100%;
+  min-height: .4rem;
+  height: auto;
+  line-height: .4rem;
+  box-sizing: border-box;
+  color: #b3b3b3;
+  float: left;
+  font-size: .24rem;
+  font-weight: normal;
+  padding-left: 5%;
+  position: relative;
+  text-align: left;
+}
+#merchantMain .merchantMainCont .index-address p {
+  width: 4rem;
+}
+#merchantMain .merchantMainCont .index-address img {
+  width: auto;
+  height: auto;
+  position: absolute;
+  left: 0;
+  top: 30%;
+}
+#merchantMain .merchantMainCont .tel {
+  width: 55%;
+  height: .3rem;
+  line-height: .3rem;
+  background: url(../img/tel.png) no-repeat center center;
+}
+#merchantMain .merchantMainCont .here {
+  width: auto;
+  height: .4rem;
+  line-height: .4rem;
+  background: url(../img/here.png) no-repeat 75% center;
+  position: absolute;
+  right: 12%;
+  top: 5%;
+}
+#merchantMain .merchantMainCont .tel,
+#merchantMain .merchantMainCont .here {
+  box-sizing: border-box;
+  color: #4d4d4d;
+  float: right;
+  font-size: .24rem;
+  font-weight: normal;
+  text-indent: 7%;
+  text-align: right;
+}
+#merchantMain ul {
+  width: 100%;
+  height: auto;
+  background: #fff;
+}
+#merchantMain .title {
+  width: 100%;
+  height: 1rem;
+  border-bottom: 1px solid #4b89dc;
+  box-sizing: border-box;
+  font-size: .36rem;
+  font-weight: normal;
+  line-height: 1rem;
+  padding-left: 3%;
+}
+#merchantMain ul li {
+  width: 100%;
+  height: .92rem;
+  border-bottom: 1px solid #e9e9e9;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+#merchantMain ul li:nth-of-type(3),
+#merchantMain ul li:nth-of-type(4) {
+  height: auto;
+}
+#merchantMain ul li h4 {
+  width: 97%;
+  height: .46rem;
+  box-sizing: border-box;
+  color: #676767;
+  display: block;
+  float: left;
+  font-size: .28rem;
+  font-weight: normal;
+  padding-top: 1%;
+  text-indent: 5%;
+}
+#merchantMain ul li span {
+  width: 100%;
+  min-height: .46rem;
+  height: auto;
+  line-height: .46rem;
+  box-sizing: border-box;
+  color: #a7a7a7;
+  float: left;
+  font-size: .22rem;
+  font-weight: normal;
+  padding: 0 5%;
+}
+#protocol,
+#protocol02 {
+  margin-top: 1rem;
+}
+#protocol h2,
+#protocol02 h2 {
+  width: 100%;
+  height: 1rem;
+  line-height: 1rem;
+  border-bottom: 1px solid #aaa;
+  font-size: .3rem;
+  font-weight: normal;
+  text-align: center;
+  margin: .1rem 0;
+}
+#protocol h3,
+#protocol02 h3,
+#protocol p,
+#protocol02 p {
+  width: 90%;
+  height: auto;
+  font-size: .24rem;
+  margin: 0 5%;
+  margin-top: .4rem;
+  text-indent: .5rem;
+}
+#protocol p,
+#protocol02 p {
+  font-weight: normal;
+}
+#protocol h3,
+#protocol02 h3 {
+  margin-top: .8rem;
+}
+#protocol .noti,
+#protocol02 .noti {
+  text-indent: 0;
+}
+#protocol .mt0,
+#protocol02 .mt0 {
+  margin-top: 0;
+}
+#protocol p:nth-last-of-type(1) {
+  margin-bottom: .4rem;
+}
+#protocol02 h3:nth-last-of-type(1) {
+  margin-bottom: .8rem;
+}
+.loadpic {
+  width: 2rem;
+  height: 2.5rem;
+  display: none;
+  margin-left: -1rem;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  z-index: 10;
+}
+.loadpic img {
+  width: 1rem;
+  height: 1rem;
+  float: left;
+  margin-left: 25%;
+}
+.loadpic p {
+  width: 2rem;
+  float: left;
+  font-size: .3rem;
+  line-height: .5rem;
+  text-align: center;
+}

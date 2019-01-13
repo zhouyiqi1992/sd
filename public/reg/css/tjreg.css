@@ -1,0 +1,139 @@
+#tjreg {
+    background: #fff;
+    margin-top: 1.2rem;
+}
+#tjreg .ipt{
+    width: 80%;
+    height: 1.05rem;
+    line-height: 1.05rem;
+    border: 1px solid #ececec;
+    border-radius: 5px;
+    box-sizing: border-box;
+    float: left;
+    margin: 0.1rem 10%;
+    overflow: hidden;
+    position: relative;
+}
+#tjreg>p{
+    width: auto;
+    height: .5rem;
+    line-height: .5rem;
+    color: #4b89dc;
+    display: block;
+    float: left;
+    font-size: .26rem;
+    margin: 0 10%;
+    padding-left: .2rem;
+}
+#tjreg>b{
+    width: auto;
+    height: .5rem;
+    line-height: .5rem;
+    color: #fa2a2a;
+    display: none;
+    float: left;
+    font-size: .26rem;
+    margin-left: 14%;
+}
+input[type="number"],
+input[type="text"],
+input[type="password"]{
+    width: 100%;
+    height: 1.05rem;
+    box-sizing: border-box;
+    border: none;
+    color: @bgw01;
+    font-size: 0.28rem;
+    float: left;
+    outline: none;
+    text-indent: 20%;
+}
+#tjreg .ipt:nth-of-type(3) input,
+#tjreg .ipt:nth-of-type(4) input,
+#tjreg .ipt:nth-of-type(5) input{
+    text-indent: 30%;
+}
+#tjreg .ipt:nth-of-type(6) input {
+    text-indent: 25%;
+}
+#tjreg .ipt:nth-of-type(2) {
+    border: none;
+}
+#tjreg .ipt:nth-of-type(2) input[type="text"] {
+    width: 53%;
+    border-radius: 5px;
+    border: 1px solid #ececec;
+    text-indent: 8%;
+}
+#tjreg .ipt:nth-of-type(6){
+    border: none;
+    height: .45rem;
+    line-height: .45rem;
+}
+.ipt b {
+    width: 1rem;
+    height: 1.05rem;
+    border-right: 1px solid #ececec;
+    box-sizing: border-box;
+    color: #aaa;
+    font-size: 0.3rem;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.05rem;
+    position: absolute;
+    left: 0;
+    text-align: center;
+}
+#tjreg .ipt:nth-of-type(3) b,
+#tjreg .ipt:nth-of-type(4) b,
+#tjreg .ipt:nth-of-type(5) b{
+    width: 1.7rem;
+    border-right: none;
+}
+#tjreg .ipt:nth-of-type(6) p {
+    width: auto;
+    height: 0.44rem;
+    color: #aaa;
+    float: left;
+    font-size: 0.28rem;
+    margin-right: 1%;
+}
+#tjreg .ipt:nth-of-type(6) a {
+    height: 0.45rem;
+    color: #0277bd;
+    float: left;
+    font-size: 0.28rem;
+}
+
+.ipt a.check {
+    width: 0.44rem;
+    height: 0.44rem;
+    border: 1px solid #4b89dc;
+    border-radius: 50%;
+    box-sizing: border-box;
+    float: left;
+    margin: 0 2%;
+}
+.ipt a.active{
+    background: url('../img/success02.png') no-repeat center 30%;
+}
+
+.ipt #msgTest {
+    width: 40%;
+    height: 1.05rem;
+    line-height: 1.05rem;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #ececec;
+    box-sizing: border-box;
+    color: #aaa;
+    float: left;
+    font-size: 0.28rem;
+    font-weight: normal;
+    margin-left: 7%;
+    text-align: center;
+}
+.button-big{
+	width: 80% !important;
+	margin: .1rem 10% !important;
+}

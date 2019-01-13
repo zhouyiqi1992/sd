@@ -17,11 +17,14 @@ class ProductController extends Controller
         $category = Category::get();
         $data = [];
         foreach ($category as $value) {
-            $products = Product::where('cid', $value['id'])->get();
+            $products = Product::where('status', 1)->where('category_id', $value['id'])->get();
 
             $p = [];
             foreach ($products as $product) {
-                $imgs = Pic::where('pid', $product['id'])->select('url')->get();
+                $imgs = [];
+                foreach ($product->img as $img) {
+                    $imgs[] = '/uploads/' . $img;
+                }
                 $p[] = $imgs;
             }
             $data[] = [
@@ -34,12 +37,9 @@ class ProductController extends Controller
 
     public function config()
     {
-        $config = Config::get();
-        $data = [];
-        foreach ($config as $value) {
-            $data[$value['key']] = $value['value'];
-        }
-        return $this->success($data);
+        $config = Config::first();
+        $config->video = 'uploads/'.$config->video;
+        return $this->success($config);
     }
 
     public function news()

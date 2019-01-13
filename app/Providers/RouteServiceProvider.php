@@ -47,8 +47,6 @@ class RouteServiceProvider extends ServiceProvider
         $this->mapAppRoutes();
 
         $this->mapWechatRoutes();
-
-        //
     }
 
     /**
