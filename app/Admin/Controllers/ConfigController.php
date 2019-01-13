@@ -120,9 +120,12 @@ class ConfigController extends Controller
         $form = new Form(new Config);
 
         $form->text('weibo', '微博');
-        $form->text('about', '关于我们');
-        $form->text('tel', '电话');
-        $form->file('video', 'Video');
+        $form->text('taobao', '淘宝');
+        $form->email('email', '邮箱');
+        $form->image('weixin', '微信');
+        $form->editor('about', '关于我们');
+        $form->mobile('tel', '电话');
+        $form->file('video', '视频');
 
         return $form;
     }
