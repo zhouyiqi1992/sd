@@ -37,8 +37,8 @@ class ProductController extends Controller
 
     public function config()
     {
-        $config = Config::get();
-        $config->video = env('APP_URL').$config->video;
+        $config = Config::first();
+        $config->video = env('APP_URL') . $config->video;
         return $this->success($config);
     }
 
