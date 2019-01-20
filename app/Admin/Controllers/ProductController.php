@@ -88,7 +88,11 @@ class ProductController extends Controller
         $grid->status('是否展示')->display(function ($value) {
             return $value ? '是' : '否';
         });
-        $grid->disableActions();
+        $grid->actions(function ($actions) {
+            $actions->disableView();
+            // 不在每一行后面展示编辑按钮
+            $actions->disableEdit();
+        });
 
         return $grid;
     }
