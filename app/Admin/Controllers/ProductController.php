@@ -88,6 +88,7 @@ class ProductController extends Controller
         $grid->status('是否展示')->display(function ($value) {
             return $value ? '是' : '否';
         });
+        $grid->disableActions();
 
         return $grid;
     }
@@ -120,8 +121,8 @@ class ProductController extends Controller
         $form = new Form(new Product);
         $form->text('name', '产品名称')->rules('unique:product');
         // 多图
-        $form->multipleImage('img','图片');
-        $form->multipleImage('img','图片')->removable();
+        $form->multipleImage('img', '图片');
+        $form->multipleImage('img', '图片')->removable();
         $form->select('category_id', '类目')->options(function ($id) {
             $category = Category::find($id);
 
@@ -131,6 +132,19 @@ class ProductController extends Controller
         })->ajax('/admin/api/categories');
         // 创建一组单选框
         $form->radio('status', '上架')->options(['1' => '是', '0' => '否'])->default('0');
+        $form->footer(function ($footer) {
+            // 去掉`重置`按钮
+            $footer->disableReset();
+
+            // 去掉`查看`checkbox
+            $footer->disableViewCheck();
+
+            // 去掉`继续编辑`checkbox
+            $footer->disableEditingCheck();
+
+            // 去掉`继续创建`checkbox
+            $footer->disableCreatingCheck();
+        });
         return $form;
     }
 }
