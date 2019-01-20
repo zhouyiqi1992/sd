@@ -129,7 +129,6 @@ class ProductController extends Controller
         $form->multipleImage('img', '图片')->removable();
         $form->select('category_id', '类目')->options(function ($id) {
             $category = Category::find($id);
-
             if ($category) {
                 return [$category->id => $category->name];
             }

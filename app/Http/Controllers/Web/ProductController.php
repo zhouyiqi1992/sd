@@ -23,7 +23,7 @@ class ProductController extends Controller
             foreach ($products as $product) {
                 $imgs = [];
                 foreach ($product->img as $img) {
-                    $imgs[] = '/uploads/' . $img;
+                    $imgs[] = env('APP_URL') . $img;
                 }
                 $p[] = $imgs;
             }
@@ -37,8 +37,8 @@ class ProductController extends Controller
 
     public function config()
     {
-        $config = Config::first();
-        $config->video = 'uploads/'.$config->video;
+        $config = Config::get();
+        $config->video = env('APP_URL').$config->video;
         return $this->success($config);
     }
 
