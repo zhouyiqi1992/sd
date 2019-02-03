@@ -123,6 +123,7 @@ class ConfigController extends Controller
         $form->text('taobao', '淘宝');
         $form->email('email', '邮箱');
         $form->image('weixin', '微信');
+        $form->image('background', '背景图');
         $form->editor('about', '关于我们');
         $form->mobile('tel', '电话');
         $form->file('video', '视频');
