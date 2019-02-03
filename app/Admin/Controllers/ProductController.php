@@ -129,7 +129,32 @@ class ProductController extends Controller
         $form->multipleImage('img', '图片2');
         $form->multipleImage('img', '图片3');
         $form->multipleImage('img', '图片4');
-        $form->multipleImage('img', '图片5')->removable();
+        $form->multipleImage('img', '图片5');
+        $form->multipleImage('img', '图片6');
+        $form->multipleImage('img', '图片7');
+        $form->multipleImage('img', '图片8');
+        $form->multipleImage('img', '图片9');
+        $form->multipleImage('img', '图片10');
+        $form->multipleImage('img', '图片11');
+        $form->multipleImage('img', '图片12');
+        $form->multipleImage('img', '图片13');
+        $form->multipleImage('img', '图片14');
+        $form->multipleImage('img', '图片15');
+        $form->multipleImage('img', '图片16');
+        $form->multipleImage('img', '图片17');
+        $form->multipleImage('img', '图片18');
+        $form->multipleImage('img', '图片19');
+        $form->multipleImage('img', '图片20');
+        $form->multipleImage('img', '图片21');
+        $form->multipleImage('img', '图片22');
+        $form->multipleImage('img', '图片23');
+        $form->multipleImage('img', '图片24');
+        $form->multipleImage('img', '图片25');
+        $form->multipleImage('img', '图片26');
+        $form->multipleImage('img', '图片27');
+        $form->multipleImage('img', '图片28');
+        $form->multipleImage('img', '图片29');
+        $form->multipleImage('img', '图片30')->removable();
         $form->select('category_id', '类目')->options(function ($id) {
             $category = Category::find($id);
             if ($category) {
