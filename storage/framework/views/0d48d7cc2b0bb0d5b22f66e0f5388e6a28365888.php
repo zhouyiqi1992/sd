@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="<?php echo e(app()->getLocale()); ?>">
+<html lang="<?php echo e(app()->getLocale(), false); ?>">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,10 +69,10 @@
             <?php if(Route::has('login')): ?>
                 <div class="top-right links">
                     <?php if(auth()->guard()->check()): ?>
-                        <a href="<?php echo e(url('/home')); ?>">Home</a>
+                        <a href="<?php echo e(url('/home'), false); ?>">Home</a>
                     <?php else: ?>
-                        <a href="<?php echo e(route('login')); ?>">Login</a>
-                        <a href="<?php echo e(route('register')); ?>">Register</a>
+                        <a href="<?php echo e(route('login'), false); ?>">Login</a>
+                        <a href="<?php echo e(route('register'), false); ?>">Register</a>
                     <?php endif; ?>
                 </div>
             <?php endif; ?>
