@@ -20,6 +20,10 @@ Route::group(['prefix' => '/v1.0', 'middleware' => 'responseBodyProcess'], funct
 
     Route::get('/news', 'ProductController@news');
 
+    Route::get('/guid', 'ProductController@guid');
+
+    Route::get('/join', 'ProductController@join');
+
     Route::post('/upload', 'CommonController@postUploadPicture');
 
 });

@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Web;
 
 use App\Models\Category;
 use App\Models\Config;
+use App\Models\Guid;
+use App\Models\Join;
 use App\Models\News;
 use App\Models\Pic;
 use App\Models\Product;
@@ -47,5 +49,17 @@ class ProductController extends Controller
     {
         $news = News::select('title', 'text')->orderBy('id', 'desc')->get();
         return $this->success($news);
+    }
+
+    public function guid()
+    {
+        $guid = Guid::select('name')->get();
+        return $this->success($guid);
+    }
+
+    public function join()
+    {
+        $join = Join::select('title', 'content')->get();
+        return $this->success($join);
     }
 }

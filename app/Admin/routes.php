@@ -42,4 +42,8 @@ Route::group([
     $router->put('config/{id}', 'ConfigController@update');
     $router->delete('config/{id}', 'ConfigController@destroy');
     $router->get('config/{id}', 'ConfigController@detail');
+
+    $router->resource('guid', GuidController::class);
+
+    $router->resource('join', JoinController::class);
 });
