@@ -5,6 +5,7 @@ public/upload/
 public/uploads/
 public/js/
 storage/
+storage/logs/laravel.log
 vendor/
 .idea/
 .env
