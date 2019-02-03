@@ -42,6 +42,7 @@ class ProductController extends Controller
         $config = Config::first();
         $config->video = env('APP_URL') . $config->video;
         $config->weixin = env('APP_URL') . $config->weixin;
+        $config->background = env('APP_URL') . $config->background;
         return $this->success($config);
     }
 
