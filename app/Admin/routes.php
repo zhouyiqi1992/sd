@@ -4,13 +4,22 @@ use Illuminate\Routing\Router;
 
 Admin::registerAuthRoutes();
 
+
 Route::group([
-    'prefix'        => config('admin.route.prefix'),
-    'namespace'     => config('admin.route.namespace'),
-    'middleware'    => config('admin.route.middleware'),
+    'prefix' => config('admin.route.prefix'),
+    'namespace' => config('admin.route.namespace'),
+    'middleware' => config('admin.route.middleware'),
 ], function (Router $router) {
 
-    $router->get('/', 'HomeController@index');
+    $router->resource('product', ProductController::class);
+
+    $router->resource('categories', CategoriesController::class);
+
+    $router->resource('news', NewsController::class);
+
+    $router->resource('config', ConfigController::class);
+
+    /*$router->get('/', 'HomeController@index');
     $router->get('product/create', 'ProductController@create');
     $router->get('product', 'ProductController@index');
     $router->get('product/{id}', 'ProductController@detail');
@@ -41,7 +50,7 @@ Route::group([
     $router->post('config', 'ConfigController@store');
     $router->put('config/{id}', 'ConfigController@update');
     $router->delete('config/{id}', 'ConfigController@destroy');
-    $router->get('config/{id}', 'ConfigController@detail');
+    $router->get('config/{id}', 'ConfigController@detail');*/
 
     $router->resource('guid', GuidController::class);
 
