@@ -91,7 +91,7 @@ class ProductController extends Controller
         $grid->actions(function ($actions) {
             $actions->disableView();
             // 不在每一行后面展示编辑按钮
-            $actions->disableEdit();
+            //$actions->disableEdit();
         });
 
         return $grid;
