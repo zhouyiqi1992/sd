@@ -124,9 +124,9 @@ class ProductController extends Controller
     {
         $form = new Form(new Product);
         $form->text('name', '产品名称')->rules('unique:product');
-        for ($i = 1; $i <= 30; $i++) {
-            $form->multipleImage('img', '图片' . $i . '(尺寸：750*1334)')->removable();
-        }
+
+        $form->multipleImage('img', '图片'  . '(尺寸：750*1334)')->removable();
+
         $form->select('category_id', '类目')->options(function ($id) {
             $category = Category::find($id);
             if ($category) {
