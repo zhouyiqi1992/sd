@@ -19,6 +19,8 @@ Route::group([
 
     $router->resource('config', ConfigController::class);
 
+    $router->get('api/categories', 'CategoriesController@apiIndex');
+
     /*$router->get('/', 'HomeController@index');
     $router->get('product/create', 'ProductController@create');
     $router->get('product', 'ProductController@index');

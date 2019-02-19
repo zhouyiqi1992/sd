@@ -123,7 +123,7 @@ class ProductController extends Controller
     protected function form()
     {
         $form = new Form(new Product);
-        $form->text('name', '产品名称')->rules('unique:product');
+        $form->text('name', '产品名称');
         $form->multipleImage('img', '图片(尺寸：750*1334)')->removable();
 
         $form->select('category_id', '类目')->options(function ($id) {
