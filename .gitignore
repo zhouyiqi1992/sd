@@ -1,9 +1,5 @@
 node_modules/
-/public/hot
-/public/storage
-public/upload/
-public/uploads/
-public/js/
+public/
 storage/
 vendor/
 .idea/
