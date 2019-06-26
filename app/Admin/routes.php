@@ -19,6 +19,8 @@ Route::group([
 
     $router->resource('config', ConfigController::class);
 
+    $router->resource('mobile_pic', MobilePicController::class);
+
     $router->get('/', 'HomeController@index');
 
     $router->get('api/categories', 'CategoriesController@apiIndex');

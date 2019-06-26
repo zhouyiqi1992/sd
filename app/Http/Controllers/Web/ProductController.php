@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Config;
 use App\Models\Guid;
 use App\Models\Join;
+use App\Models\MobilePic;
 use App\Models\News;
 use App\Models\Pic;
 use App\Models\Product;
@@ -62,5 +63,11 @@ class ProductController extends Controller
     {
         $join = Join::select('title', 'content')->get();
         return $this->success($join);
+    }
+
+    public function mobile_pic()
+    {
+        $pic = MobilePic::get();
+        return $this->success($pic);
     }
 }

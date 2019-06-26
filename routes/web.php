@@ -24,6 +24,8 @@ Route::group(['prefix' => '/v1.0', 'middleware' => 'responseBodyProcess'], funct
 
     Route::get('/join', 'ProductController@join');
 
+    Route::get('/mobile_pic', 'ProductController@mobile_pic');
+
     Route::post('/upload', 'CommonController@postUploadPicture');
 
 });
