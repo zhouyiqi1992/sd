@@ -1,7 +1,7 @@
 node_modules/
-public/
-storage/
-storage/logs/
+/public/
+/storage/
+/storage/logs/
 vendor/
 .idea/
 .env
